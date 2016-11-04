@@ -1,0 +1,9 @@
+{
+    "name": "purescript-erl-lists",
+    "set": "psc-0.10.1",
+    "source": "http://localhost:8081/packages.json",
+    "depends": [
+        "unfoldable",
+        "tuples"
+    ]
+}
