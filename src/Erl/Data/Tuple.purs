@@ -4,15 +4,15 @@ module Erl.Data.Tuple where
 import Prelude
 import Data.Tuple.Nested as Nested
 
-foreign import data Tuple1 :: * -> *
+foreign import data Tuple1 :: Type -> Type
 
-foreign import data Tuple2 :: * -> * -> *
+foreign import data Tuple2 :: Type -> Type -> Type
 
-foreign import data Tuple3 :: * -> * -> * -> *
+foreign import data Tuple3 :: Type -> Type -> Type -> Type
 
-foreign import data Tuple4 :: * -> * -> * -> * -> *
+foreign import data Tuple4 :: Type -> Type -> Type -> Type -> Type
 
-foreign import data Tuple5 :: * -> * -> * -> * -> * -> *
+foreign import data Tuple5 :: Type -> Type -> Type -> Type -> Type -> Type
 
 foreign import tuple1 :: forall a. a -> Tuple1 a
 

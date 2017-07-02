@@ -3,7 +3,7 @@
 all: ps erl
 
 ps:
-	psc-package sources | xargs pserlc 'src/**/*.purs'
+	psc-package sources | xargs purs compile 'src/**/*.purs'
 
 erl:
 	mkdir -p ebin

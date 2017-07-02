@@ -1,7 +1,7 @@
 {
     "name": "purescript-erl-lists",
-    "set": "psc-0.10.1",
-    "source": "http://localhost:8081/packages.json",
+    "set": "erl-0.10.7-1",
+    "source": "https://github.com/purerl/package-sets.git",
     "depends": [
         "unfoldable",
         "tuples"
