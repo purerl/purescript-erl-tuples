@@ -35,7 +35,7 @@ foreign import uncurry4 :: forall a b c d z. (a -> b -> c -> d -> z) -> Tuple4 a
 foreign import uncurry5 :: forall a b c d e z. (a -> b -> c -> d -> e -> z) -> Tuple5 a b c d e -> z
 
 untuple1 :: forall a. Tuple1 a -> a
-untuple1 = uncurry1 id
+untuple1 = uncurry1 identity
 
 toNested2 :: forall a b. Tuple2 a b -> Nested.Tuple2 a b
 toNested2 = uncurry2 Nested.tuple2

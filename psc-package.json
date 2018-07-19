@@ -1,9 +1,9 @@
 {
-    "name": "purescript-erl-lists",
-    "set": "erl-0.10.7-1",
-    "source": "https://github.com/purerl/package-sets.git",
-    "depends": [
-        "unfoldable",
-        "tuples"
-    ]
+  "name": "purescript-erl-lists",
+  "set": "erl-0.12.0-20180719",
+  "source": "https://github.com/purerl/package-sets.git",
+  "depends": [
+    "unfoldable",
+    "tuples"
+  ]
 }
