@@ -10,4 +10,4 @@ erl: ps
 	erlc -o ebin/ output/*/*.erl
 
 test: erl
-	erl -pa ebin -noshell -eval '(test_main@ps:main@c())()' -eval 'init:stop()'
+	erl -pa ebin -noshell -eval '(test_main@ps:main())()' -eval 'init:stop()'
