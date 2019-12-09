@@ -36,6 +36,10 @@ foreign import uncurry4 :: forall a b c d z. (a -> b -> c -> d -> z) -> Tuple4 a
 
 foreign import uncurry5 :: forall a b c d e z. (a -> b -> c -> d -> e -> z) -> Tuple5 a b c d e -> z
 
+foreign import fst :: forall a b. Tuple2 a b -> a
+
+foreign import snd :: forall a b. Tuple2 a b -> b
+
 untuple1 :: forall a. Tuple1 a -> a
 untuple1 = uncurry1 identity
 
