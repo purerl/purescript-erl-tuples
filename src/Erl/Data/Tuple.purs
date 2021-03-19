@@ -5,6 +5,9 @@ import Prelude
 
 import Data.Eq (class Eq1)
 import Data.Tuple.Nested as Nested
+import Data.Bifunctor (class Bifunctor)
+import Data.Bifoldable (class Bifoldable)
+import Data.Bitraversable (class Bitraversable)
 
 foreign import data Tuple1 :: Type -> Type
 
@@ -118,3 +121,16 @@ instance showTuple4 :: (Show a, Show b, Show c, Show d) => Show (Tuple4 a b c d)
 instance showTuple5 :: (Show a, Show b, Show c, Show d, Show e) => Show (Tuple5 a b c d e) where
   show = uncurry5 (\a b c d e ->
     "(Tuple5 " <> show a <> " " <> show b <> " " <> show c <> " " <> show d <> " " <> show e <> ")")
+    
+instance bifunctorTuple2 :: Bifunctor Tuple2 where
+  bimap f g tuple = tuple2 (f (fst tuple)) (g (snd tuple))
+
+instance bitraversableTuple2 :: Bitraversable Tuple2 where
+  bitraverse f g t = tuple2 <$> f (fst t) <*> g (snd t) 
+  bisequence t = tuple2 <$> (fst t) <*> (snd t)
+
+instance bifoldableTuple :: Bifoldable Tuple2 where
+  bifoldMap f g t = f (fst t) <> g (snd t)
+  bifoldr f g z t = f (fst t) (g (snd t) z)
+  bifoldl f g z t = g (f z (fst t)) (snd t)
+
