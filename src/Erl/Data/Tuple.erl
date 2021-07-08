@@ -14,16 +14,16 @@ tuple8(A,B,C,D,E,F,G,H) -> {A,B,C,D,E,F,G,H}.
 tuple9(A,B,C,D,E,F,G,H,I) -> {A,B,C,D,E,F,G,H,I}.
 tuple10(A,B,C,D,E,F,G,H,I,J) -> {A,B,C,D,E,F,G,H,I,J}.
 
-uncurry1(F,{A}) -> F(A).
-uncurry2(F,{A,B}) -> (F(A))(B).
-uncurry3(F,{A,B,C}) -> ((F(A))(B))(C).
-uncurry4(F,{A,B,C,D}) -> (((F(A))(B))(C))(D).
-uncurry5(F,{A,B,C,D,E}) -> ((((F(A))(B))(C))(D))(E).
-uncurry6(F,{A,B,C,D,E,F}) -> (((((F(A))(B))(C))(D))(E))(F).
-uncurry7(F,{A,B,C,D,E,F,G}) -> ((((((F(A))(B))(C))(D))(E))(F))(G).
-uncurry8(F,{A,B,C,D,E,F,G,H}) -> (((((((F(A))(B))(C))(D))(E))(F))(G))(H).
-uncurry9(F,{A,B,C,D,E,F,G,H,I}) -> ((((((((F(A))(B))(C))(D))(E))(F))(G))(H))(I).
-uncurry10(F,{A,B,C,D,E,F,G,H,I,J}) -> (((((((((F(A))(B))(C))(D))(E))(F))(G))(H))(I))(J).
+uncurry1(Fn,{A}) -> Fn(A).
+uncurry2(Fn,{A,B}) -> (Fn(A))(B).
+uncurry3(Fn,{A,B,C}) -> ((Fn(A))(B))(C).
+uncurry4(Fn,{A,B,C,D}) -> (((Fn(A))(B))(C))(D).
+uncurry5(Fn,{A,B,C,D,E}) -> ((((Fn(A))(B))(C))(D))(E).
+uncurry6(Fn,{A,B,C,D,E,F}) -> (((((Fn(A))(B))(C))(D))(E))(F).
+uncurry7(Fn,{A,B,C,D,E,F,G}) -> ((((((Fn(A))(B))(C))(D))(E))(F))(G).
+uncurry8(Fn,{A,B,C,D,E,F,G,H}) -> (((((((Fn(A))(B))(C))(D))(E))(F))(G))(H).
+uncurry9(Fn,{A,B,C,D,E,F,G,H,I}) -> ((((((((Fn(A))(B))(C))(D))(E))(F))(G))(H))(I).
+uncurry10(Fn,{A,B,C,D,E,F,G,H,I,J}) -> (((((((((Fn(A))(B))(C))(D))(E))(F))(G))(H))(I))(J).
 
 fst({A, _B}) -> A.
 
